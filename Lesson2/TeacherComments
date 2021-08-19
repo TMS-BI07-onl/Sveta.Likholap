@@ -1,0 +1,19 @@
+Well done!
+
+4.
+a)-1
+Correct answer: SELECT COUNT(DISTINCT PersonType) AS DistinctCount.....
+You forgot to add count. And also you need only to count types, not multiple columns. That led you to the totally incorrect result.
+c)
+You switched values for calculations. Please pay attention to the task. :)
+e) -1
+Expected answer:
+SELECT  ProductSubcategoryID,
+		MIN(Weight) AS Min_weight, 
+		MAX(Size) AS Max_size
+FROM Production.Product
+WHERE Color IS NOT NULL
+GROUP BY ProductSubcategoryID
+Order by is not required in the task so as color is not needed in the select (and group by). Also pay attention to special functions, such as IS NOT NULL.
+
+Mark: 8.
