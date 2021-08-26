@@ -1,0 +1,27 @@
+Well done!
+
+3)-0.25
+Row number is returning unique number for each row, but to have unique numbers for rank and dense_rank you need to have unique values in each row (for column that you use in PARTITION BY).
+
+4.
+a)
+Seems that you first inserted values from the next tasks. :)
+
+b)
+You can insert multiple rows by having it divided by comma, like this:
+INSERT INTO Production.UnitMeasure
+VALUES 
+('TT1', 'Test1', '2020-09-09'),
+('TT2','Test2',GETDATE())
+
+f)
+I expected using ISNULL function for TerritoryGroup for replacing nulls, but technically you were right.
+
+g)
+Sql server can't understand which day is a holiday :))
+
+5.
+Please, recalculate count(id).
+
+Mark:10.
+
