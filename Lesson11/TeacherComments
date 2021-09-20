@@ -1,0 +1,18 @@
+Well done!
+
+Homework
+Your answer is correct, great job!
+
+Test
+1
+You probably meant another table in JOIN:
+JOIN Subject c ON a.idTeacher =c.idTeacher
+should be
+JOIN Teacher-Subject c ON a.idTeacher =c.idTeacher
+
+2
+-2
+What have we said about name_functions in where clause? Your code will return an error by "there is no column Amount_subject".
+
+Mark:10
+Test: 8
