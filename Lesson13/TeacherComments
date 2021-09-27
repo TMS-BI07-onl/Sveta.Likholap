@@ -1,0 +1,8 @@
+Well done!
+
+In the source you should have only natural keys, so, no id's.
+Then you need to have separate lookup tile to each lookup (which means: one - for swimmers, one - for disqualifiaction, ...). You're joining tables by natural key (passport number for swimmer, etc.) and adding id as new column.
+In the target you' ll add only new found id's.
+
+Mark: 6
+Test mark: 6
