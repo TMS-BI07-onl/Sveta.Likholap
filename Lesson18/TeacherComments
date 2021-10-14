@@ -1,0 +1,31 @@
+Well done!
+
+1. -1
+You should have specified the join conditions. In your solution you have cross join.
+
+2. -0.5
+The task is totally solvable without window functions.
+
+3. -0.5
+We need to have one. And only the name.
+Possible solution: 
+SELECT TOP 1 WITH TIES region_name
+FROM Employees e JOIN Departments d ON dep.department_id=emp.department_id
+	JOIN Locations l ON d.location_id=l.location_id
+	JOIN Countries c ON l.country_id=c.country_id
+	JOIN Regions r ON c.region_id=r.region_id 
+GROUP BY region_name
+ORDER BY COUNT(employee_id) DESC
+
+4. 
+All can be calculated in the one query.
+
+5.-1.5
+Possible solution:
+SELECT first_name, last_name, department_id, DATEDIFF(year, start_date, ISNULL(end_date, GETDATE())) as exp
+FROM Employees e JOIN Job_history jh ON e.employee_id=jh.employee_id
+WHERE DATEDIFF(year, start_date, ISNULL(end_date, GETDATE()))>10
+
+6. Better use dense_rank.
+
+Mark: 7
